@@ -1,30 +1,30 @@
 <template>
   <div class="page">
-    <Sidebar @changeComponent="changeComponent" />
-    <Content :selectedComponent="selectedComponent" />
+    <SidebarBlock @changeComponent="changeComponent" :activeComponent="selectedComponent" />
+    <ContentBlock :selectedComponent="selectedComponent" />
   </div>
 </template>
 
 <script>
-import Sidebar from '@/components/Sidebar.vue';
-import Content from '@/components/Content.vue';
+import SidebarBlock from '@/components/SidebarBlock.vue'
+import ContentBlock from '@/components/ContentBlock.vue'
 
 export default {
   data() {
     return {
-      selectedComponent: 'model',
-    };
+      selectedComponent: 'model'
+    }
   },
   components: {
-    Sidebar,
-    Content,
+    SidebarBlock,
+    ContentBlock
   },
   methods: {
     changeComponent(componentName) {
-      this.selectedComponent = componentName;
-    },
-  },
-};
+      this.selectedComponent = componentName
+    }
+  }
+}
 </script>
 
 <style scoped>

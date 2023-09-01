@@ -6,18 +6,19 @@
 </template>
 
 <script>
-import VisualizationModel from "@/components/VisualizationModel.vue";
-import VisualizationTimeline from "@/components/VisualizationTimeline.vue";
+import VisualizationModel from '@/components/VisualizationModel.vue'
+import VisualizationTimeline from '@/components/VisualizationTimeline.vue'
 
 export default {
+  name: 'ContentBlock',
   props: {
-    selectedComponent: String,
+    selectedComponent: String
   },
   components: {
     VisualizationTimeline,
-    VisualizationModel,
-  },
-};
+    VisualizationModel
+  }
+}
 </script>
 
 <style>
