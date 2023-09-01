@@ -5,19 +5,26 @@
 <script>
 import 'vis-timeline/styles/vis-timeline-graph2d.css';
 import { Timeline } from 'vis-timeline/standalone';
+import pointsData from '@/data/shoot.json';
+import {convertDate} from "@/utils/dateConverter";
 
 export default {
   name: 'VisualizationTimeline',
   mounted() {
     const container = this.$refs.timeline;
     const options = {};
-    const items = [
-      { id: 1, content: 'Событие 1', start: '2000-01-01' },
-      { id: 2, content: 'Событие 2', start: '2005-01-01' },
-      { id: 3, content: 'Событие 3', start: '2010-01-01' },
-    ];
 
-    const timeline = new Timeline(container, items, options);
+    const items = pointsData.map((point) => {
+      return {
+        id: point.id,
+        content: `${point.satellite} point ${point.point}`,
+        start: convertDate(point.startTimePeriod),
+        end: convertDate(point.endTimePeriod),
+        className: 'custom-event',
+      };
+    });
+
+    this.timeline = new Timeline(container, items, options);
   }
 };
 </script>
