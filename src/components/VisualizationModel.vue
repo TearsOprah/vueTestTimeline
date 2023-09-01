@@ -37,7 +37,7 @@ export default {
       viewer.entities.add({
         position: position,
         billboard: {
-          image: 'src/assets/point.svg',
+          image: '/src/assets/point.svg',
           color: randomColor
         },
         label: {
