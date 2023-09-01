@@ -1,5 +1,5 @@
 <template>
-  <div ref="cesiumContainer"></div>
+  <div class="model" ref="cesiumContainer"></div>
 </template>
 
 <script>
@@ -16,5 +16,7 @@ export default {
 </script>
 
 <style scoped>
-
+.model {
+  height: 100%;
+}
 </style>
