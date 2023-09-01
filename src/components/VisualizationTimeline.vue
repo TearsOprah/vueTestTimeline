@@ -26,7 +26,6 @@ export default {
         content: `${point.satellite} point ${point.point}`,
         start: convertDate(point.startTimePeriod),
         end: convertDate(point.endTimePeriod),
-        className: 'custom-event'
       }
     })
 
@@ -38,9 +37,5 @@ export default {
 <style>
 .timeline {
 }
-.custom-event {
-  background-color: rgba(0, 255, 34, 0.2);
-  border-color: green;
-  color: black;
-}
+
 </style>

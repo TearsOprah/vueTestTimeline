@@ -43,7 +43,7 @@ export default {
   width: 250px;
   display: flex;
   flex-direction: column;
-  background-color: #1c1c1d;
+  background-color: var(--color-background);
   align-items: center;
 }
 .sidebar__logo {
@@ -53,14 +53,14 @@ export default {
 }
 .sidebar__navigation {
   width: 100%;
-  border-top: 1px solid rgba(244, 243, 244, 0.8);
+  border-top: 1px solid var(--color-text);
   padding-top: 20px;
 }
 .sidebar__button {
   width: 100%;
   background-color: inherit;
   border: none;
-  color: rgba(244, 243, 244, 0.8);
+  color: var(--color-text);
   height: 50px;
   transition: all 0.6s ease;
   text-align: start;
@@ -68,10 +68,25 @@ export default {
   font-size: 16px;
 }
 .sidebar__button:hover {
-  background-color: #2a85e7;
+  background-color: var(--color-button-hover);
 }
 .active {
-  background-color: #0062cc;
+  background-color: var(--color-button-active);
   color: white;
+}
+@media (max-width: 600px) {
+  .sidebar {
+    width: 120px;
+  }
+  .sidebar__logo {
+    width: 60px;
+    height: 60px;
+    margin: 20px 0 40px;
+  }
+  .sidebar__button {
+    height: 40px;
+    padding-left: 10px;
+    font-size: 12px;
+  }
 }
 </style>
