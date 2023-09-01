@@ -1,6 +1,6 @@
 <template>
   <div class="sidebar">
-    <img class="sidebar__logo" src="src/assets/logo.svg" alt="logo" />
+    <img class="sidebar__logo" src="/src/assets/logo.svg" alt="logo" />
     <nav class="sidebar__navigation">
       <button
         class="sidebar__button"
