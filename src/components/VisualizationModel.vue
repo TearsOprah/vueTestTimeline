@@ -6,6 +6,7 @@
 import { Viewer, Cartesian3, Color, LabelStyle, VerticalOrigin, Cartesian2 } from 'cesium'
 import 'cesium/Source/Widgets/widgets.css'
 import pointsData from '@/data/points.json'
+import pointImage from '@/assets/point.svg'
 
 export default {
   name: 'VisualizationModel',
@@ -37,7 +38,7 @@ export default {
       viewer.entities.add({
         position: position,
         billboard: {
-          image: '/src/assets/point.svg',
+          image: pointImage,
           color: randomColor
         },
         label: {
